@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: python:3.9-slim
+      options: --user root
     services:
       postgres:
         image: postgres:alpine
